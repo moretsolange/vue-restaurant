@@ -1,25 +1,27 @@
 <template>
   <header>
-    <h1>
-      <router-link to="/">Szulejmán étterem</router-link>
-    </h1>
-    <nav>
-      <ul>
-        <li>
-          <router-link to="/products">Rendelés</router-link>
-        </li>
-        <li>
-          <router-link to="/cart">Kosár</router-link>
-          <base-badge mode="elegant">{{ cartQuantity }}</base-badge>
-        </li>
-        <li v-if="isLoggedIn">
-          <router-link to="/admin">Admin</router-link>
-        </li>
-      </ul>
-    </nav>
-    <div>
-      <button v-if="!isLoggedIn" @click="login">Belépés</button>
-      <button v-if="isLoggedIn" @click="logout">Kilépés</button>
+    <div class="head">
+      <h1>
+        <router-link to="/">Szulejmán étterem</router-link>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <router-link to="/products">Rendelés</router-link>
+          </li>
+          <li>
+            <router-link to="/cart">Kosár</router-link>
+            <base-badge mode="elegant">{{ cartQuantity }}</base-badge>
+          </li>
+          <li v-if="isLoggedIn">
+            <router-link to="/admin">Admin</router-link>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <button v-if="!isLoggedIn" @click="login">Belépés</button>
+        <button v-if="isLoggedIn" @click="logout">Kilépés</button>
+      </div>
     </div>
   </header>
 </template>
@@ -52,6 +54,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 10rem;
 }
 
 ul {

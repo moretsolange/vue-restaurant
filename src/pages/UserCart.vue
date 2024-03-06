@@ -2,8 +2,11 @@
   <section>
     <h2>Kosarad</h2>
     <h3>
-      Végösszeg: <base-badge mode="elegant">{{ cartTotal }} Forint</base-badge>
-      <button @click="order" v-if="cartTotal >= 1">Rendelés</button>
+      Végösszeg:
+      <base-badge mode="elegant">{{ cartTotal }} Forint</base-badge>
+      <button class="orderBtn" @click="order" v-if="cartTotal >= 1">
+        Rendelés
+      </button>
     </h3>
     <ul>
       <cart-item

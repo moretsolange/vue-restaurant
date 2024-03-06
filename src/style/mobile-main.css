@@ -1,0 +1,28 @@
+@media only screen and (max-width: 560px), screen and (max-height: 560px) {
+  .head {
+    gap: 0 !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  header {
+    height: 10rem !important;
+    justify-content: center !important;
+  }
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem !important;
+  }
+  li {
+    font-size: 0.9rem;
+    margin-bottom: 1rem !important;
+  }
+
+  .product__actions {
+    margin-top: 1rem !important;
+  }
+
+  .orderBtn {
+    margin: 1rem !important;
+  }
+}

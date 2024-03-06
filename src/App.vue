@@ -5,6 +5,8 @@
 
 <script>
 import TheHeader from './components/nav/TheHeader.vue';
+import './style/mobile-main.css';
+import './style/tablet-main.css';
 
 export default {
   components: {
@@ -14,10 +16,6 @@ export default {
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-}
-
 html {
   font-family: sans-serif;
 }
